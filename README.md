@@ -3,7 +3,7 @@
 Intelora Intelligent Personal Assistant Platform
 ==========
 
-Intelora is based on [Mycroft: An Open Source Artificial Intelligence for Everyone](https://github.com/MycroftAI/mycroft-core).
+Intelora is based on [Mycroft: An Open Source Artificial Intelligence for Everyone](https://github.com/MycroftAI/mycroft-core) project.
 
 See [wiki](https://github.com/Intelora/core/wiki) for full documentation of this project.
 
