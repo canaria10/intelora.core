@@ -14,7 +14,7 @@ install:
 # - pip install -r test-requirements.txt
 # command to run tests
 script:
- - pep8 intelora test
+ - pep8 mycroft tests
 # - ./start.sh unittest --fail-on-error
 env:
  - IS_TRAVIS=true
