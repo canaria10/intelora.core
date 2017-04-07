@@ -1,4 +1,5 @@
 [![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/Intelora/core) [![Maintenance](https://img.shields.io/maintenance/yes/2017.svg)](https://github.com/Intelora/core) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/Intelora/core) [![Build Status](https://travis-ci.org/Intelora/core.svg?branch=master)](https://travis-ci.org/Intelora/core)
+==========
 Intelora Intelligent Personal Assistant Platform
 ==========
 
