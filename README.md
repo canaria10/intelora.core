@@ -1,6 +1,7 @@
 Intelora Intelligent Personal Assistant Platform
 ==========
 
+[![Stories in Ready](https://badge.waffle.io/Intelora/core.png?label=ready&title=Ready)](http://waffle.io/Intelora/core)
 [![Build Status](https://travis-ci.org/apquinit/intelora-core.svg?branch=master)](https://travis-ci.org/apquinit/intelora-core)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
