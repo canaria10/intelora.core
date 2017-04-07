@@ -1,15 +1,15 @@
-[![Build Status](https://travis-ci.org/apquinit/intelora-core.svg?branch=master)](https://travis-ci.org/apquinit/intelora-core)
+[![Build Status](https://travis-ci.org/Intelora/core.svg?branch=master)](https://travis-ci.org/Intelora/core)
 ==========
 Intelora Intelligent Personal Assistant Platform
 ==========
 
-This Project is based on Mycroft (github.com/MycroftAI/mycroft-core)
+This Project is based on Mycroft github.com/MycroftAI/mycroft-core
 
-Full docs at: (docs.mycroft.ai)
+Full docs at: docs.mycroft.ai
 
-Pair Mycroft instance at: (home.mycroft.ai)
+Pair Mycroft instance at: home.mycroft.ai
 
-Join the Intelora Slack Team: (intelora-slack-invite.herokuapp.com)
+Join the Intelora Slack Team: intelora-slack-invite.herokuapp.com
 
 ## Setting Up Intelora
 
