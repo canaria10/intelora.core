@@ -74,7 +74,7 @@ Put the relevant key in between the quotes and Mycroft Core should begin to use 
 - [Weather Skill API, OpenWeatherMap](http://openweathermap.org/api)
 - [Wolfram-Alpha Skill](http://products.wolframalpha.com/api/)
 
-These are the keys currently in use in Mycroft Core.
+These are the keys currently in use in Intelora.
 
 ## Configuration
 
@@ -84,21 +84,21 @@ When the configuration loader starts, it looks in in that locations and loads AL
 
 # Running Intelora Quick Start
 
-To start the essential tasks run `./mycroft.sh start`. Which will start the service, skills, voice and cli (using --quiet mode) in a detched screen and log the output of the screens to the their respective log files (e.g. ./log/mycroft-service.log).
-Optionally you can run `./mycroft.sh start -v` Which will start the service, skills and voice. Or `./mycroft.sh start -c` Which will start the service, skills and cli.
+To start the essential tasks run `./intelora.sh start`. Which will start the service, skills, voice and cli (using --quiet mode) in a detched screen and log the output of the screens to the their respective log files (e.g. ./log/mycroft-service.log).
+Optionally you can run `./intelora.sh start -v` Which will start the service, skills and voice. Or `./intelora.sh start -c` Which will start the service, skills and cli.
 
-To stop Mycroft run `./mycroft.sh stop`. This will quit all of the detached screens.
+To stop Intelora run `./intelora.sh stop`. This will quit all of the detached screens.
 To restart Mycroft run './mycroft.sh restart`.
 
 Quick screen tips
 - run `screen -list` to see all running screens
-- run `screen -r [screen-name]` (e.g. `screen -r mycroft-service`) to reatach a screen
+- run `screen -r [screen-name]` (e.g. `screen -r intelora-service`) to reatach a screen
 - to detach a running screen press `ctrl + a, ctrl + d`
 See the screen man page for more details 
 
 # Running Intelora Individual Services
-## With `start.sh`
-Mycroft provides `start.sh` to run a large number of common tasks. This script uses the virtualenv created by `dev_setup.sh`. The usage statement lists all run targets, but to run a Mycroft stack out of a git checkout, the following processes should be started:
+
+Intelora provides `start.sh` to run a large number of common tasks. This script uses the virtualenv created by `dev_setup.sh`. The usage statement lists all run targets, but to run a Intelora stack out of a git checkout, the following processes should be started:
 
 - run `./start.sh service`
 - run `./start.sh skills`
