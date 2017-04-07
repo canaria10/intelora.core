@@ -13,7 +13,7 @@ Join the Intelora Slack Team: (https://intelora-slack-invite.herokuapp.com)
 
 For Developers and Contributors: CLONE THE REPOSITORY
 
-For Normal Users : DOWNLOAD THE LATEST RELEASE OR THE COMPRESSED PACKAGE
+For Normal Users : DOWNLOAD THE LATEST [RELEASE](https://github.com/Intelora/core/archive/master.zip)
 
 ## Build and Setup Intelora
 
