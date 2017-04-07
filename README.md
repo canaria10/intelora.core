@@ -11,6 +11,10 @@ Pair Mycroft instance at: (https://home.mycroft.ai)
 
 Join the Intelora Slack Team: (https://intelora-slack-invite.herokuapp.com)
 
+For Developers and Contributors: CLONE THE REPOSITORY
+
+For Normal Users : DOWNLOAD THE LATEST RELEASE OR THE COMPRESSED PACKAGE
+
 ## Build and Setup Intelora
 
 ### Debian, Arch, or Fedora Based Operating Systems
