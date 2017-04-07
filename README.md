@@ -11,7 +11,7 @@ Pair Mycroft instance at: home.mycroft.ai
 
 Join the Intelora Slack Team: intelora-slack-invite.herokuapp.com
 
-## Setting Up Intelora
+## Build and Setup Intelora
 
 ### Debian, Arch, or Fedora Based Operating Systems
 
