@@ -3,26 +3,28 @@
 Intelora Intelligent Personal Assistant Platform
 ==========
 
-Intelora is based on Mycroft: (https://github.com/MycroftAI/mycroft-core)
+Intelora is based on [Mycroft: An Open Source Artificial Intelligence for Everyone] (https://github.com/MycroftAI/mycroft-core).
 
-Full Documentation at: (https://docs.mycroft.ai)
+See [WIKI](https://github.com/Intelora/core/wiki) for full documentation of this project.
 
-Pair Intelora instance at: (https://home.mycroft.ai)
-
-Join the Intelora Slack Team: (https://intelora-slack-invite.herokuapp.com)
-
-For Developers and Contributors: CLONE THE REPOSITORY
-
-For Normal Users : DOWNLOAD THE LATEST [RELEASE](https://github.com/Intelora/core/archive/master.zip)
+Join the Intelora Slack Team by clicking this [LINK](https://intelora-slack-invite.herokuapp.com). Enter your email and click the link that will be sent to you.
 
 ## Build and Setup Intelora
+
+### For Developers and Contributors
+
+Clone the repository.
+
+### For Normal Users
+
+Download the latest [RELEASE](https://github.com/Intelora/core/archive/master.zip).
 
 ### Debian, Arch, Fedora or Solus Based Operating Systems
 
 - Run the 'build_host_setup_*' script specific for your OS.
 - Run `dev_setup.sh` to setup the virtual environment.
 
-### Other environments
+### Other Environments
 
 The following packages are required for setting up the development environment, and are what is installed by `build_host_setup` scripts.
 
@@ -47,9 +49,9 @@ The following packages are required for setting up the development environment, 
 
 ## Account Manager
 
-Mycroft AI, Inc. maintains the API and Accounts Management System. Developers can sign up at https://home.mycroft.ai
+Mycroft AI, Inc. maintains the API and Accounts Management System. Developers can sign up and manage their account at [https://home.mycroft.ai].
 
-By default the Intelora software is configured to use Mycroft API, upon any request such as "Hey [NAME], what is the weather?", you will be informed that you need to pair and Intelora will speak a 6-digit code, which you enter into the pairing page on the [Home site](https://home.mycroft.ai).
+By default the Intelora software is configured to use Mycroft API, upon any request such as "Hey [NAME], what is the weather?", you will be informed that you need to pair and Intelora will speak a 6-digit code, which you enter into the pairing page on the [Mycroft API Site](https://home.mycroft.ai).
 
 Once signed and a device is paired, the unit will use our API keys for services, such as the STT (Speech-to-Text) API. It also allows you to use our API keys for weather, Wolfram-Alpha, and various other skills.
 
@@ -71,7 +73,7 @@ The place to insert the API key looks like the following:
 
 Put the relevant key in between the quotes and Mycroft Core should begin to use the key immediately.
 
-### API Key services
+### API Key Services
 
 - [STT API, Google STT](http://www.chromium.org/developers/how-tos/api-keys)
 - [Weather Skill API, OpenWeatherMap](http://openweathermap.org/api)
