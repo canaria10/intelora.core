@@ -1,0 +1,4 @@
+deflog on
+logfile logs/intelora-skills.log
+logfile flush 1
+

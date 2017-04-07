@@ -1,0 +1,4 @@
+deflog on
+logfile logs/intelora-cli.log
+logfile flush 1
+
