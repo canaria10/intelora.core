@@ -5,9 +5,9 @@ Intelora Intelligent Personal Assistant Platform
 
 This Project is based on Mycroft: (https://github.com/MycroftAI/mycroft-core)
 
-Full docs at: (https://docs.mycroft.ai)
+Full Documentation at: (https://docs.mycroft.ai)
 
-Pair Mycroft instance at: (https://home.mycroft.ai)
+Pair Intelora instance at: (https://home.mycroft.ai)
 
 Join the Intelora Slack Team: (https://intelora-slack-invite.herokuapp.com)
 
@@ -17,11 +17,10 @@ For Normal Users : DOWNLOAD THE LATEST [RELEASE](https://github.com/Intelora/cor
 
 ## Build and Setup Intelora
 
-### Debian, Arch, or Fedora Based Operating Systems
+### Debian, Arch, Fedora or Solus Based Operating Systems
 
-- Run the build host setup script for your OS (Debian: `build_host_setup_debian.sh`, Arch: `build_host_setup_arch.sh`, Fedora: `build_host_setup_fedora.sh`).
+- Run the 'build_host_setup_*' script specific for your OS.
 - Run `dev_setup.sh` to setup the virtual environment.
-- Restart session try rebooting the computer, or logging out and back in.
 
 ### Other environments
 
