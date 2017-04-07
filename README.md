@@ -98,6 +98,8 @@ See the screen man page for more details
 
 # Running Intelora Individual Services
 
+### With `start.sh`
+
 Intelora provides `start.sh` to run a large number of common tasks. This script uses the virtualenv created by `dev_setup.sh`. The usage statement lists all run targets, but to run a Intelora stack out of a git checkout, the following processes should be started:
 
 - run `./start.sh service`
@@ -106,7 +108,7 @@ Intelora provides `start.sh` to run a large number of common tasks. This script 
 
 *Note: The above scripts are blocking, so each will need to be run in a separate terminal session.*
 
-## Without `start.sh`
+### Without `start.sh`
 
 Activate your virtualenv.
 
