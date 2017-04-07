@@ -11,7 +11,7 @@ Pair Mycroft instance at: (home.mycroft.ai)
 
 Join the Intelora Slack Team: (intelora-slack-invite.herokuapp.com)
 
-# Setting Up Intelora
+## Setting Up Intelora
 
 ### Debian, Arch, or Fedora Based Operating Systems
 
@@ -82,7 +82,7 @@ Configuration file can be found at mycroft/configuration/mycroft.conf
 
 When the configuration loader starts, it looks in in that locations and loads ALL configuration. Keys that exist in multiple config files will be overridden by the last file to contain that config value. This results in a minimal amount of config being written for a specific device/user, without modifying the distribution files.
 
-# Running Intelora Quick Start
+## Running Intelora Quick Start
 
 To start the essential tasks run `./intelora.sh start`. Which will start the service, skills, voice and cli (using --quiet mode) in a detched screen and log the output of the screens to the their respective log files (e.g. ./log/mycroft-service.log).
 Optionally you can run `./intelora.sh start -v` Which will start the service, skills and voice. Or `./intelora.sh start -c` Which will start the service, skills and cli.
@@ -96,7 +96,7 @@ Quick screen tips
 - to detach a running screen press `ctrl + a, ctrl + d`
 See the screen man page for more details 
 
-# Running Intelora Individual Services
+## Running Intelora Individual Services
 
 ### With `start.sh`
 
@@ -127,7 +127,7 @@ source ~/.virtualenvs/mycroft/bin/activate
 
 *Note: The above scripts are blocking, so each will need to be run in a separate terminal session. Each terminal session will require that the virtualenv be activated. There are very few reasons to use this method.*
 
-# FAQ/Common Errors
+## FAQ/Common Errors
 
 #### When running, I get the error `mycroft.messagebus.client.ws - ERROR - Exception("Uncaught 'error' event.",)`
 
