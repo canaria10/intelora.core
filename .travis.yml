@@ -11,10 +11,11 @@ install:
  - cd setup
  - VIRTUALENV_ROOT=${VIRTUAL_ENV} ./dev_setup.sh
  - pip install -r requirements.txt
+ - cd ..
 # - pip install -r test-requirements.txt
 # command to run tests
-#script:
-# - pep8 mycroft tests
+script:
+ - pep8 mycroft tests
 # - ./start.sh unittest --fail-on-error
 env:
  - IS_TRAVIS=true
