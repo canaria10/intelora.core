@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Intelora/core.svg?branch=master)](https://travis-ci.org/Intelora/core)
+[![Maintenance](https://img.shields.io/maintenance/yes/2017.svg)](https://github.com/Intelora/core) [![Build Status](https://travis-ci.org/Intelora/core.svg?branch=master)](https://travis-ci.org/Intelora/core) [![GitHub tag](https://img.shields.io/github/tag/strongloop/express.svg)](https://github.com/Intelora/core) [![Github Releases](https://img.shields.io/github/downloads/atom/atom/latest/total.svg)](https://github.com/Intelora/core) [![GitHub contributors](https://img.shields.io/github/contributors/cdnjs/cdnjs.svg)](https://github.com/Intelora/core) [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/Intelora/core)
 ==========
 Intelora Intelligent Personal Assistant Platform
 ==========
