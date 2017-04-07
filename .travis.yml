@@ -10,6 +10,7 @@ cache: pocketsphinx-python
 install:
  - cd setup
  - VIRTUALENV_ROOT=${VIRTUAL_ENV} ./dev_setup.sh
+ - cd setup
  - pip install -r requirements.txt
  - cd ..
 # - pip install -r test-requirements.txt

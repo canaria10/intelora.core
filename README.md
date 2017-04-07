@@ -3,13 +3,13 @@
 Intelora Intelligent Personal Assistant Platform
 ==========
 
-This Project is based on Mycroft github.com/MycroftAI/mycroft-core
+This Project is based on Mycroft: (https://github.com/MycroftAI/mycroft-core)
 
-Full docs at: docs.mycroft.ai
+Full docs at: (https://docs.mycroft.ai)
 
-Pair Mycroft instance at: home.mycroft.ai
+Pair Mycroft instance at: (https://home.mycroft.ai)
 
-Join the Intelora Slack Team: intelora-slack-invite.herokuapp.com
+Join the Intelora Slack Team: (https://intelora-slack-invite.herokuapp.com)
 
 ## Build and Setup Intelora
 

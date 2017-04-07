@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 ######################################################
 # dev_setup.sh
-# @author sean.fitzgerald (aka clusterfudge)
 #
 # The purpose of this script is to create a self-
 # contained development environment using
