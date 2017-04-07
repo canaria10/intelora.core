@@ -1,4 +1,6 @@
-Intelora Intelligent Personal Assistant Platform [![Build Status](https://travis-ci.org/apquinit/intelora-core.svg?branch=master)](https://travis-ci.org/apquinit/intelora-core) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Build Status](https://travis-ci.org/apquinit/intelora-core.svg?branch=master)](https://travis-ci.org/apquinit/intelora-core)
+==========
+Intelora Intelligent Personal Assistant Platform
 ==========
 
 This Project is based on Mycroft (github.com/MycroftAI/mycroft-core)
