@@ -8,11 +8,8 @@ python:
 cache: pocketsphinx-python
 # command to install dependencies
 install:
- - cd setup
- - VIRTUALENV_ROOT=${VIRTUAL_ENV} ./dev_setup.sh
- - cd setup
- - pip install -r requirements.txt
- - cd ..
+ - VIRTUALENV_ROOT=${VIRTUAL_ENV} /setup/./dev_setup.sh
+ - pip install -r /setup/requirements.txt
 # - pip install -r test-requirements.txt
 # command to run tests
 script:
