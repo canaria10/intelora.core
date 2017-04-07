@@ -13,8 +13,8 @@ install:
  - pip install -r requirements.txt
 # - pip install -r test-requirements.txt
 # command to run tests
-script:
- - pep8 mycroft tests
+#script:
+# - pep8 mycroft tests
 # - ./start.sh unittest --fail-on-error
 env:
  - IS_TRAVIS=true
