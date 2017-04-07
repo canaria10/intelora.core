@@ -7,7 +7,7 @@ Intelora is based on [Mycroft: An Open Source Artificial Intelligence for Everyo
 
 See [wiki](https://github.com/Intelora/core/wiki) for full documentation of Intelora.
 
-Join the [Intelora](https://intelora-slack-invite.herokuapp.com) Slack Team. Enter your email and click the confirmation link that will be sent to you.
+Join the [Intelora Slack Team](https://intelora-slack-invite.herokuapp.com). Enter your email and click the confirmation link that will be sent to you.
 
 ## Build and Setup Intelora
 
