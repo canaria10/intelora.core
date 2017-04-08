@@ -1,11 +1,11 @@
-[![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/Intelora/core) [![Maintenance](https://img.shields.io/maintenance/yes/2017.svg)](https://github.com/Intelora/core) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/Intelora/core) [![Build Status](https://travis-ci.org/Intelora/core.svg?branch=master)](https://travis-ci.org/Intelora/core)
+[![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/intelora/core) [![Maintenance](https://img.shields.io/maintenance/yes/2017.svg)](https://github.com/intelora/core) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/intelora/core) [![Build Status](https://travis-ci.org/Intelora/core.svg?branch=master)](https://travis-ci.org/intelora/core)
 ==========
 Intelora Intelligent Personal Assistant Platform
 ==========
 
 Intelora is based on [Mycroft: An Open Source Artificial Intelligence for Everyone](https://github.com/MycroftAI/mycroft-core) project.
 
-See [wiki](https://github.com/Intelora/core/wiki) for full documentation of Intelora.
+See [project website](https://intelora.github.io) for full documentation of Intelora.
 
 Join the [Intelora Slack Team](https://intelora-slack-invite.herokuapp.com). Enter your email and click the confirmation link that will be sent to you.
 
