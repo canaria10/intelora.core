@@ -31,7 +31,6 @@ LOGGER = getLogger(__name__)
 class TTS(object):
     """
     TTS abstract class to be implemented by all TTS engines.
-
     It aggregates the minimum required parameters and exposes
     ``execute(sentence)`` function.
     """
@@ -53,11 +52,9 @@ class TTS(object):
     @abstractmethod
     def execute(self, sentence):
         ''' This performs TTS, blocking until audio completes
-
         This performs the TTS sequence.  Upon completion, the sentence will
         have been spoken.   Optionally, the TTS engine may have sent visemes
         to the enclosure by the TTS engine.
-
         Args:
             sentence (str): Words to be spoken
         '''
@@ -72,7 +69,6 @@ class TTS(object):
 class TTSValidator(object):
     """
     TTS Validator abstract class to be implemented by all TTS engines.
-
     It exposes and implements ``validate(tts)`` function as a template to
     validate the TTS engines.
     """
@@ -135,10 +131,8 @@ class TTSFactory(object):
     def create():
         """
         Factory method to create a TTS engine based on configuration.
-
         The configuration file ``mycroft.conf`` contains a ``tts`` section with
         the name of a TTS module to be read by this method.
-
         "tts": {
             "module": <engine_name>
         }
@@ -158,4 +152,4 @@ class TTSFactory(object):
             tts = clazz(lang, voice)
 
         tts.validator.validate()
-        return tts
+return tts
