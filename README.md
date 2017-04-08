@@ -19,7 +19,7 @@ Clone the repository.
 
 ### For Normal Users
 
-Download the latest [release](https://github.com/Intelora/core/archive/master.zip).
+Download the latest [release](https://github.com/intelora/core/releases).
 
 ### Debian, Arch, Fedora or Solus Based Operating Systems
 
