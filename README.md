@@ -5,7 +5,7 @@ Intelora Intelligent Personal Assistant Platform
 
 Intelora is based on [Mycroft: An Open Source Artificial Intelligence for Everyone](https://github.com/MycroftAI/mycroft-core) project.
 
-See [project website](https://intelora.github.io) for full documentation of Intelora.
+See [project website](https://intelora.github.io) to know more about Intelora.
 
 Join the [Intelora Slack Team](https://intelora-slack-invite.herokuapp.com). Enter your email and click the confirmation link that will be sent to you.
 
