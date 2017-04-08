@@ -37,15 +37,12 @@ LOGGER = getLogger(__name__)
 
 def resolve_resource_file(res_name):
     """Convert a resource into an absolute filename.
-
     Resource names are in the form: 'filename.ext'
     or 'path/filename.ext'
-
     The system wil look for ~/.mycroft/res_name first, and
     if not found will look at /opt/mycroft/res_name,
     then finally it will look for res_name in the 'mycroft/res'
     folder of the source code package.
-
     Example:
     With mycroft running as the user 'bob', if you called
         resolve_resource_file('snd/beep.wav')
@@ -53,7 +50,6 @@ def resolve_resource_file(res_name):
     '/opt/mycroft/snd/beep.wav' or '.../mycroft/res/snd/beep.wav',
     where the '...' is replaced by the path where the package has
     been installed.
-
     Args:
         res_name (str): a resource path/name
     """
@@ -162,7 +158,6 @@ def connected(host="8.8.8.8", port=53, timeout=3):
     Host: 8.8.8.8 (google-public-dns-a.google.com)
     OpenPort: 53/tcp
     Service: domain (DNS/TCP)
-
     NOTE:
     This is no longer in use by this version
     New method checks for a connection using ConnectionError only when
@@ -183,9 +178,7 @@ def connected(host="8.8.8.8", port=53, timeout=3):
 
 def curate_cache(dir, min_free_percent=5.0):
     """Clear out the directory if needed
-
     This assumes all the files in the directory can be deleted as freely
-
     Args:
         dir (str): directory path that holds cached files
         min_free_percent (float): percentage (0.0-100.0) of drive to keep free
@@ -226,16 +219,13 @@ def curate_cache(dir, min_free_percent=5.0):
 
 def get_cache_directory(domain=None):
     """Get a directory for caches data
-
     This directory can be used to hold temporary caches of data to
     speed up performance.  This directory will likely be part of a
     small RAM disk and may be cleared at any time.  So code that
     uses these cached files must be able to fallback and regenerate
     the file.
-
     Args:
         domain (str): The cache domain.  Basically just a subdirectory.
-
     Return:
         str: a path to the directory where you can cache data
     """
@@ -248,14 +238,11 @@ def get_cache_directory(domain=None):
 
 def get_ipc_directory(domain=None):
     """Get the directory used for Inter Process Communication
-
     Files in this folder can be accessed by different processes on the
     machine.  Useful for communication.  This is often a small RAM disk.
-
     Args:
         domain (str): The IPC domain.  Basically a subdirectory to prevent
             overlapping signal filenames.
-
     Returns:
         str: a path to the IPC directory
     """
@@ -268,11 +255,9 @@ def get_ipc_directory(domain=None):
 
 def _ensure_directory_exists(dir, domain=None):
     """ Create a directory and give access rights to all
-
     Args:
         domain (str): The IPC domain.  Basically a subdirectory to prevent
             overlapping signal filenames.
-
     Returns:
         str: a path to the directory
     """
@@ -295,7 +280,6 @@ def _ensure_directory_exists(dir, domain=None):
 
 def create_signal(signal_name):
     """Create a named signal
-
     Args:
         signal_name (str): The signal's name.  Must only contain characters
             valid in filenames.
@@ -310,13 +294,11 @@ def create_signal(signal_name):
 
 def check_for_signal(signal_name, sec_lifetime=0):
     """See if a named signal exists
-
     Args:
         signal_name (str): The signal's name.  Must only contain characters
             valid in filenames.
         sec_lifetime (int, optional): How many seconds the signal should
             remain valid.  If 0 or not specified, it is a single-use signal.
-
     Returns:
         bool: True if the signal is defined, False otherwise
     """

@@ -95,6 +95,7 @@ elif [[ "$1" == "start" && -z "$2" ]]
 then
   start-intelora service
   start-intelora skills
+  sleep 3
   start-intelora voice
   start-intelora cli --quiet
   exit 0
@@ -102,6 +103,7 @@ elif [[ "$1" == "start" && "$2" == "-v" ]]
 then
   start-intelora service
   start-intelora skills
+  sleep 3
   start-intelora voice
   exit 0
 elif [[ "$1" == "start" && "$2" == "-c" ]]
@@ -119,8 +121,9 @@ then
 elif [[ "$1" == "stop" && -z "$2" ]]
 then
   stop-intelora service
-  stop-intelora skills
   stop-intelora voice
+  sleep 3
+  stop-intelora skills
   stop-intelora cli
   exit 0
 elif [[ "$1" == "restart" && -z "$2" ]]
