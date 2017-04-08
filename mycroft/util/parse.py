@@ -100,4 +100,4 @@ def normalize_en(text, remove_articles):
 
         normalized += " " + word
 
-return normalized[1:] # strip the initial space
+return normalized[1:]  # strip the initial space

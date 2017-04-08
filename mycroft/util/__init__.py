@@ -320,4 +320,4 @@ def check_for_signal(signal_name, sec_lifetime=0):
 
 def validate_param(value, name):
     if not value:
-raise ValueError("Missing or empty %s in mycroft.conf " % name)
+        raise ValueError("Missing or empty %s in mycroft.conf " % name)

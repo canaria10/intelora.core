@@ -216,4 +216,4 @@ class ConfigurationListener(object):
 
     @staticmethod
     def updated(message):
-ConfigurationManager.update(message.data)
+        ConfigurationManager.update(message.data)

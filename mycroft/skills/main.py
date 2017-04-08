@@ -184,4 +184,4 @@ if __name__ == "__main__":
             skill_reload_thread.cancel()
 
     finally:
-sys.exit()
+        sys.exit()
