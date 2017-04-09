@@ -1,4 +1,4 @@
-[![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/intelora/core) [![Maintenance](https://img.shields.io/maintenance/yes/2017.svg)](https://github.com/intelora/core) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/intelora/core) [![Build Status](https://travis-ci.org/Intelora/core.svg?branch=master)](https://travis-ci.org/intelora/core)
+[![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/intelora/intelora) [![Maintenance](https://img.shields.io/maintenance/yes/2017.svg)](https://github.com/intelora/intelora) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/intelora/intelora) [![Build Status](https://travis-ci.org/intelora/intelora.svg?branch=master)](https://travis-ci.org/intelora/intelora)
 ==========
 Intelora Intelligent Personal Assistant Platform
 ==========
