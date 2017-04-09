@@ -7,7 +7,7 @@ Intelora is based on [Mycroft: An Open Source Artificial Intelligence for Everyo
 
 Visit [project website](https://intelora.github.io) to know more about Intelora. (Website development still in progress...)
 
-Contribute to the [project wiki and forum](https://github.com/intelora/core/wiki) by adding content and help other developers and users in using Intelora!
+Contribute to the [project wiki and forum](https://github.com/intelora/intelora/wiki) by adding content and help other developers and users in using Intelora!
 
 Join the [Intelora Slack Team](https://intelora-slack-invite.herokuapp.com). Enter your email and click the confirmation link that will be sent to you.
 
@@ -19,7 +19,7 @@ Clone the repository.
 
 ### For Normal Users
 
-Download the latest [release](https://github.com/intelora/core/releases).
+Download the latest [release](https://github.com/intelora/intelora/releases).
 
 ### Debian, Arch, Fedora or Solus Based Operating Systems
 
