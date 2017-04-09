@@ -62,12 +62,13 @@ cd ${TOP}
 #cd ${TOP}
 #${TOP}/scripts/install-pocketsphinx.sh -q
 
+#build and install ism
+cd ${TOP}
+${TOP}/scripts/install-ism.sh
+
 #build and install mimic
 cd ${TOP}
 ${TOP}/scripts/install-mimic.sh
-
-cd ${TOP}
-${TOP}/scripts/install-msm.sh
 
 # install pygtk for desktop_launcher skill
 ${TOP}/scripts/install-pygtk.sh

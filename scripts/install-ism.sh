@@ -3,8 +3,8 @@
 SKILLS_DIR='/opt/mycroft/skills'
 # exit on any error
 set -Ee
-rm -rf msm
-git clone https://github.com/MycroftAI/msm.git msm
+rm -rf ism
+git clone https://github.com/intelora/intelora.skill.manager.git ism
 chmod +x msm/msm
 
 if [[ ${IS_TRAVIS} != true ]]; then
