@@ -5,7 +5,7 @@ SKILLS_DIR='/opt/mycroft/skills'
 set -Ee
 rm -rf ism
 git clone https://github.com/intelora/intelora.skill.manager.git ism
-chmod +x msm/msm
+chmod +x ism/ism
 
 if [[ ${IS_TRAVIS} != true ]]; then
     echo "Create /opt/mycroft/skills if it doesn't exist"
