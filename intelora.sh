@@ -43,14 +43,14 @@ function verify-start {
 }
 
 function start-intelora {
-  screen -mdS intelora-$1$2 -c $SCRIPTS/intelora-$1.screen $DIR/scripts/intelora-start.sh $1 $2
+  screen -mdS intelora-$1$2 -c $SCRIPTS/intelora-$1.screen $DIR/scripts/start.sh $1 $2
   sleep 1
   verify-start intelora-$1$2
   echo "Intelora $1$2 started"
 }
 
 function debug-start-intelora {
-  screen -c $SCRIPTS/intelora-$1.screen $DIR/scripts/intelora-start.sh $1 $2
+  screen -c $SCRIPTS/intelora-$1.screen $DIR/scripts/start.sh $1 $2
   sleep 1
   verify-start intelora-$1$2
   echo "Intelora $1$2 started"
@@ -65,6 +65,7 @@ function stop-intelora {
 }
 
 function restart-intelora {
+
     if screen -list | grep -q "quiet";
     then
       $0 stop
@@ -95,7 +96,6 @@ elif [[ "$1" == "start" && -z "$2" ]]
 then
   start-intelora service
   start-intelora skills
-  sleep 3
   start-intelora voice
   start-intelora cli --quiet
   exit 0
@@ -103,7 +103,6 @@ elif [[ "$1" == "start" && "$2" == "-v" ]]
 then
   start-intelora service
   start-intelora skills
-  sleep 3
   start-intelora voice
   exit 0
 elif [[ "$1" == "start" && "$2" == "-c" ]]
@@ -121,9 +120,8 @@ then
 elif [[ "$1" == "stop" && -z "$2" ]]
 then
   stop-intelora service
-  stop-intelora voice
-  sleep 3
   stop-intelora skills
+  stop-intelora voice
   stop-intelora cli
   exit 0
 elif [[ "$1" == "restart" && -z "$2" ]]

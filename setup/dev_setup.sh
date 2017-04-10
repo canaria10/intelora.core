@@ -56,7 +56,6 @@ CORES=$(nproc)
 echo Building with $CORES cores.
 
 TOP=$(cd $(dirname $0) && cd .. && pwd -L)
-cd ${TOP}
 
 #build and install pocketsphinx
 #cd ${TOP}

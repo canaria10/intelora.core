@@ -18,6 +18,7 @@
 
 def normalize(text, lang="en-us", remove_articles=True):
     """Prepare a string for parsing
+
     This function prepares the given text for parsing by making
     numbers consistent, getting rid of contractions, etc.
     Args:
@@ -100,4 +101,4 @@ def normalize_en(text, remove_articles):
 
         normalized += " " + word
 
-return normalized[1:]  # strip the initial space
+    return normalized[1:]  # strip the initial space

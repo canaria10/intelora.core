@@ -92,4 +92,4 @@ class Intent(object):
         intent_name = message.data.get('intent_name')
         new_parsers = [
             p for p in self.engine.intent_parsers if p.name != intent_name]
-self.engine.intent_parsers = new_parsers
+        self.engine.intent_parsers = new_parsers

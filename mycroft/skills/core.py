@@ -37,8 +37,12 @@ __author__ = 'seanfitz'
 
 signal.signal(signal.SIGCHLD, signal.SIG_IGN)
 
+PRIMARY_SKILLS = ['intent', 'wake']
 BLACKLISTED_SKILLS = ["send_sms", "media"]
-SKILLS_DIR = "/opt/mycroft/skills"
+SKILLS_BASEDIR = dirname(__file__)
+THIRD_PARTY_SKILLS_DIR = ["/opt/mycroft/third_party", "/opt/mycroft/skills"]
+# Note: /opt/mycroft/skills is recommended, /opt/mycroft/third_party
+# is for backwards compatibility
 
 MainModule = '__init__'
 
@@ -147,12 +151,18 @@ def create_skill_descriptor(skill_folder):
     return {"name": os.path.basename(skill_folder), "info": info}
 
 
-def load_skills(emitter, skills_root=SKILLS_DIR):
+def load_skills(emitter, skills_root=SKILLS_BASEDIR):
     logger.info("Checking " + skills_root + " for new skills")
     skill_list = []
-    for skill in get_skills(skills_root):
-        skill_list.append(load_skill(skill, emitter))
+    skills = get_skills(skills_root)
+    for skill in skills:
+        if skill['name'] in PRIMARY_SKILLS:
+            skill_list.append(load_skill(skill, emitter))
 
+    for skill in skills:
+        if (skill['name'] not in PRIMARY_SKILLS and
+                skill['name'] not in BLACKLISTED_SKILLS):
+            skill_list.append(load_skill(skill, emitter))
     return skill_list
 
 
@@ -225,6 +235,7 @@ class MycroftSkill(object):
     def initialize(self):
         """
         Initialization function to be implemented by all Skills.
+
         Usually used to create intents rules and register them.
         """
         raise Exception("Initialize not implemented for skill: " + self.name)
@@ -328,4 +339,4 @@ class MycroftSkill(object):
         process termination. The skill implementation must
         shutdown all processes and operations in execution.
         """
-self.stop()
+        self.stop()

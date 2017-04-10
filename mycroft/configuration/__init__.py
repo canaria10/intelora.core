@@ -15,11 +15,11 @@
 # You should have received a copy of the GNU General Public License
 # along with Mycroft Core.  If not, see <http://www.gnu.org/licenses/>.
 import json
-
-import inflection
 import re
 from genericpath import exists, isfile
 from os.path import join, dirname, expanduser
+
+import inflection
 
 from mycroft.util.log import getLogger
 
@@ -176,6 +176,7 @@ class ConfigurationManager(object):
     def get(locations=None):
         """
         Get cached configuration.
+
         :return: A dictionary representing Mycroft configuration.
         """
         if not ConfigurationManager.__config:

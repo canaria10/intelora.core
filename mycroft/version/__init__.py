@@ -48,4 +48,4 @@ class VersionManager(object):
             except:
                 LOG.error("Failed to load version from '%s'"
                           % VersionManager.__location)
-return {"coreVersion": None, "enclosureVersion": None}
+        return {"coreVersion": None, "enclosureVersion": None}
