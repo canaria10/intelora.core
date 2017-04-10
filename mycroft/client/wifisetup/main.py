@@ -126,7 +126,7 @@ class CaptiveHTTPRequestHandler(SimpleHTTPRequestHandler):
                 self.send_header("Location", "http://start.mycroft.ai")
                 self.end_headers()
                 return True
-        except:
+        except BaseException:
             tb = traceback.format_exc()
             LOG.info("exception caught")
             LOG.info(tb)
@@ -173,7 +173,7 @@ address=/#/{server}
     def up(self):
         try:
             card = pyw.getcard(self.iface)
-        except:
+        except BaseException:
             wpa(self.wiface, 'p2p_group_add', 'persistent=0')
             self.iface = self.get_iface()
             self.password = wpa(self.iface, 'p2p_get_passphrase')

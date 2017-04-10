@@ -33,6 +33,7 @@ class MustacheDialogRenderer(object):
     """
     A dialog template renderer based on the mustache templating language.
     """
+
     def __init__(self):
         self.templates = {}
 
@@ -85,6 +86,7 @@ class DialogLoader(object):
     """
     Loads a collection of dialog files into a renderer implementation.
     """
+
     def __init__(self, renderer_factory=MustacheDialogRenderer):
         self.__renderer = renderer_factory()
 

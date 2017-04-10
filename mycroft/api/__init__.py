@@ -64,7 +64,7 @@ class Api(object):
     def get_data(self, response):
         try:
             return response.json()
-        except:
+        except BaseException:
             return response.text
 
     def build_headers(self, params):

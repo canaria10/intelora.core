@@ -130,7 +130,7 @@ class LogMonitorThread(Thread):
                     if bSimple:
                         print line.strip()
                     else:
-                        mergedLog.append(self.logid+line.strip())
+                        mergedLog.append(self.logid + line.strip())
 
 
 def start_log_monitor(filename):
@@ -173,8 +173,8 @@ class MicMonitorThread(Thread):
                 # Just adjust meter settings
                 # Ex:Energy:  cur=4 thresh=1.5
                 parts = line.split("=")
-                meter_thresh = float(parts[len(parts)-1])
-                meter_cur = float(parts[len(parts)-2].split(" ")[0])
+                meter_thresh = float(parts[len(parts) - 1])
+                meter_cur = float(parts[len(parts) - 2].split(" ")[0])
 
 
 def start_mic_monitor(filename):
@@ -262,7 +262,7 @@ def page_log(page_up):
     else:
         log_line_offset -= 10
     if log_line_offset > len(mergedLog):
-        log_line_offset = len(mergedLog)-10
+        log_line_offset = len(mergedLog) - 10
     if log_line_offset < 0:
         log_line_offset = 0
     draw_screen()
@@ -285,14 +285,15 @@ def draw_meter():
     global meter_peak
 
     if meter_cur > meter_peak:
-        meter_peak = meter_cur+1
+        meter_peak = meter_cur + 1
 
-    height = curses.LINES/3
+    height = curses.LINES / 3
     scale = meter_peak
-    if meter_peak > meter_thresh*3:
-        scale = meter_thresh*3
-    h_cur = clamp(int((float(meter_cur) / scale) * height), 0, height-1)
-    h_thresh = clamp(int((float(meter_thresh) / scale) * height), 0, height-1)
+    if meter_peak > meter_thresh * 3:
+        scale = meter_thresh * 3
+    h_cur = clamp(int((float(meter_cur) / scale) * height), 0, height - 1)
+    h_thresh = clamp(
+        int((float(meter_thresh) / scale) * height), 0, height - 1)
     clr = curses.color_pair(4)  # dark yellow
 
     for i in range(0, height):
@@ -312,13 +313,13 @@ def draw_meter():
         else:
             meter += "    "
 
-        scr.addstr(curses.LINES-1-i, curses.COLS-12, meter, clr)
+        scr.addstr(curses.LINES - 1 - i, curses.COLS - 12, meter, clr)
         if i <= h_cur:
             if meter_cur > meter_thresh:
                 clr_bar = curses.color_pair(3)   # dark green for loud
             else:
                 clr_bar = curses.color_pair(5)   # dark blue for 'silent'
-            scr.addstr(curses.LINES-1-i, curses.COLS-7, "*", clr_bar)
+            scr.addstr(curses.LINES - 1 - i, curses.COLS - 7, "*", clr_bar)
 
 
 def draw_screen():
@@ -336,7 +337,7 @@ def draw_screen():
 
     # Display log output at the top
     cLogs = len(mergedLog)
-    cLogLinesToShow = curses.LINES-13
+    cLogLinesToShow = curses.LINES - 13
     start = clamp(cLogs - cLogLinesToShow, 0, cLogs - 1) - log_line_offset
     end = cLogs - log_line_offset
     if start < 0:
@@ -348,9 +349,9 @@ def draw_screen():
     # adjust the line offset (prevents paging up too far)
     log_line_offset = cLogs - end
 
-    scr.addstr(0, 0, "Log Output:" + " " * (curses.COLS-31) + str(start) +
+    scr.addstr(0, 0, "Log Output:" + " " * (curses.COLS - 31) + str(start) +
                "-" + str(end) + " of " + str(cLogs), CLR_HEADING)
-    scr.addstr(1, 0,  "=" * (curses.COLS-1), CLR_HEADING)
+    scr.addstr(1, 0, "=" * (curses.COLS - 1), CLR_HEADING)
     y = 2
     len_line = 0
     for i in range(start, end):
@@ -380,7 +381,7 @@ def draw_screen():
             end = start + (curses.COLS - 4)
             if start == 0:
                 log = log[start:end] + "~~~~"   # start....
-            elif end >= len_line-1:
+            elif end >= len_line - 1:
                 log = "~~~~" + log[start:end]   # ....end
             else:
                 log = "~~" + log[start:end] + "~~"  # ..middle..
@@ -390,28 +391,28 @@ def draw_screen():
         y += 1
 
     # Log legend in the lower-right
-    scr.addstr(curses.LINES-10, curses.COLS/2 + 2, "Log Output Legend",
+    scr.addstr(curses.LINES - 10, curses.COLS / 2 + 2, "Log Output Legend",
                CLR_HEADING)
-    scr.addstr(curses.LINES-9, curses.COLS/2 + 2, "=" * (curses.COLS/2 - 4),
-               CLR_HEADING)
-    scr.addstr(curses.LINES-8, curses.COLS/2 + 2,
+    scr.addstr(curses.LINES - 9, curses.COLS / 2 + 2,
+               "=" * (curses.COLS / 2 - 4), CLR_HEADING)
+    scr.addstr(curses.LINES - 8, curses.COLS / 2 + 2,
                "DEBUG output",
                CLR_LOG_DEBUG)
-    scr.addstr(curses.LINES-7, curses.COLS/2 + 2,
-               os.path.basename(log_files[0])+", other",
+    scr.addstr(curses.LINES - 7, curses.COLS / 2 + 2,
+               os.path.basename(log_files[0]) + ", other",
                CLR_LOG1)
     if len(log_files) > 1:
-        scr.addstr(curses.LINES-6, curses.COLS/2 + 2,
+        scr.addstr(curses.LINES - 6, curses.COLS / 2 + 2,
                    os.path.basename(log_files[1]), CLR_LOG2)
 
     # History log in the middle
-    scr.addstr(curses.LINES-10, 0, "History", CLR_HEADING)
-    scr.addstr(curses.LINES-9, 0,  "=" * (curses.COLS/2), CLR_HEADING)
+    scr.addstr(curses.LINES - 10, 0, "History", CLR_HEADING)
+    scr.addstr(curses.LINES - 9, 0, "=" * (curses.COLS / 2), CLR_HEADING)
 
     cChat = len(chat)
     if cChat:
-        y = curses.LINES-8
-        for i in range(cChat-clamp(cChat, 1, 5), cChat):
+        y = curses.LINES - 8
+        for i in range(cChat - clamp(cChat, 1, 5), cChat):
             chat_line = chat[i]
             if chat_line.startswith(">> "):
                 clr = CLR_CHAT_RESP
@@ -423,18 +424,18 @@ def draw_screen():
     # Command line at the bottom
     l = line
     if len(line) > 0 and line[0] == ":":
-        scr.addstr(curses.LINES-2, 0, "Command ('help' for options):",
+        scr.addstr(curses.LINES - 2, 0, "Command ('help' for options):",
                    CLR_CMDLINE)
-        scr.addstr(curses.LINES-1, 0, ":", CLR_CMDLINE)
+        scr.addstr(curses.LINES - 1, 0, ":", CLR_CMDLINE)
         l = line[1:]
     else:
-        scr.addstr(curses.LINES-2, 0,
+        scr.addstr(curses.LINES - 2, 0,
                    "Input (':' for command mode, Ctrl+C to quit):",
                    CLR_CMDLINE)
-        scr.addstr(curses.LINES-1, 0, ">", CLR_CMDLINE)
+        scr.addstr(curses.LINES - 1, 0, ">", CLR_CMDLINE)
 
     draw_meter()
-    scr.addstr(curses.LINES-1, 2, l, CLR_INPUT)
+    scr.addstr(curses.LINES - 1, 2, l, CLR_INPUT)
     scr.refresh()
 
 
@@ -447,25 +448,25 @@ def show_help():
 
     screen_mode = 1  # showing help (prevents overwrite by log updates)
     scr.erase()
-    scr.addstr(0, 0,  center(25) + "Mycroft Command Line Help",
+    scr.addstr(0, 0, center(25) + "Mycroft Command Line Help",
                CLR_CMDLINE)
-    scr.addstr(1, 0,  "=" * (curses.COLS-1),
+    scr.addstr(1, 0, "=" * (curses.COLS - 1),
                CLR_CMDLINE)
-    scr.addstr(2, 0,  "Up / Down         scroll thru query history")
-    scr.addstr(3, 0,  "PgUp / PgDn       scroll thru log history")
-    scr.addstr(4, 0,  "Left / Right      scroll long log lines left/right")
-    scr.addstr(5, 0,  "Home              scroll to start of long log lines")
-    scr.addstr(6, 0,  "End               scroll to end of long log lines")
+    scr.addstr(2, 0, "Up / Down         scroll thru query history")
+    scr.addstr(3, 0, "PgUp / PgDn       scroll thru log history")
+    scr.addstr(4, 0, "Left / Right      scroll long log lines left/right")
+    scr.addstr(5, 0, "Home              scroll to start of long log lines")
+    scr.addstr(6, 0, "End               scroll to end of long log lines")
 
-    scr.addstr(10, 0,  "Commands (type ':' to enter command mode)",
+    scr.addstr(10, 0, "Commands (type ':' to enter command mode)",
                CLR_CMDLINE)
-    scr.addstr(11, 0,  "=" * (curses.COLS-1),
+    scr.addstr(11, 0, "=" * (curses.COLS - 1),
                CLR_CMDLINE)
-    scr.addstr(12, 0,  ":help              this screen")
-    scr.addstr(13, 0,  ":quit or :exit     exit the program")
-    scr.addstr(14, 0,  ":meter [show|hide] display of microphone level")
+    scr.addstr(12, 0, ":help              this screen")
+    scr.addstr(13, 0, ":quit or :exit     exit the program")
+    scr.addstr(14, 0, ":meter [show|hide] display of microphone level")
 
-    scr.addstr(curses.LINES-1, 0,  center(23) + "Press any key to return",
+    scr.addstr(curses.LINES - 1, 0, center(23) + "Press any key to return",
                CLR_HEADING)
 
     scr.refresh()
@@ -572,24 +573,24 @@ def main(stdscr):
                 line = ""
             elif c == curses.KEY_UP:
                 # Move up the history stack
-                hist_idx = clamp(hist_idx+1, -1, len(history)-1)
+                hist_idx = clamp(hist_idx + 1, -1, len(history) - 1)
                 if hist_idx >= 0:
-                    line = history[len(history)-hist_idx-1]
+                    line = history[len(history) - hist_idx - 1]
                 else:
                     line = ""
             elif c == curses.KEY_DOWN:
                 # Move down the history stack
-                hist_idx = clamp(hist_idx-1, -1, len(history)-1)
+                hist_idx = clamp(hist_idx - 1, -1, len(history) - 1)
                 if hist_idx >= 0:
-                    line = history[len(history)-hist_idx-1]
+                    line = history[len(history) - hist_idx - 1]
                 else:
                     line = ""
             elif c == curses.KEY_LEFT:
                 # scroll long log lines left
-                log_line_lr_scroll += curses.COLS/4
+                log_line_lr_scroll += curses.COLS / 4
             elif c == curses.KEY_RIGHT:
                 # scroll long log lines right
-                log_line_lr_scroll -= curses.COLS/4
+                log_line_lr_scroll -= curses.COLS / 4
                 if log_line_lr_scroll < 0:
                     log_line_lr_scroll = 0
             elif c == curses.KEY_HOME:
@@ -625,10 +626,10 @@ def main(stdscr):
             # else:
             #    line += str(c)
 
-    except KeyboardInterrupt, e:
+    except KeyboardInterrupt as e:
         # User hit Ctrl+C to quit
         pass
-    except KeyboardInterrupt, e:
+    except KeyboardInterrupt as e:
         logger.exception(e)
     finally:
         scr.erase()
@@ -654,17 +655,18 @@ def simple_cli():
             ws.emit(
                 Message("recognizer_loop:utterance",
                         {'utterances': [line.strip()]}))
-    except KeyboardInterrupt, e:
+    except KeyboardInterrupt as e:
         # User hit Ctrl+C to quit
         print("")
-    except KeyboardInterrupt, e:
+    except KeyboardInterrupt as e:
         logger.exception(e)
         event_thread.exit()
         sys.exit()
 
+
 # Find the correct log path relative to this script
 scriptPath = os.path.dirname(os.path.realpath(__file__))
-localLogPath = os.path.realpath(scriptPath+"/../../../scripts/logs")
+localLogPath = os.path.realpath(scriptPath + "/../../../scripts/logs")
 
 # Monitor relative logs (for Github installs)
 start_log_monitor(localLogPath + "/mycroft-skills.log")

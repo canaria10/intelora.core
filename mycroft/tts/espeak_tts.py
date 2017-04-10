@@ -43,7 +43,7 @@ class ESpeakValidator(TTSValidator):
     def validate_connection(self):
         try:
             subprocess.call(['espeak', '--version'])
-        except:
+        except BaseException:
             raise Exception(
                 'ESpeak is not installed. Run: sudo apt-get install espeak')
 

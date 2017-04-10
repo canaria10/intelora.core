@@ -117,7 +117,7 @@ def load_skill(skill_descriptor, emitter):
             logger.warn(
                 "Module %s does not appear to be skill" % (
                     skill_descriptor["name"]))
-    except:
+    except BaseException:
         logger.error(
             "Failed to load skill: " + skill_descriptor["name"], exc_info=True)
     return None
@@ -199,7 +199,7 @@ class MycroftSkill(object):
     def location_pretty(self):
         """ Get a more 'human' version of the location as a string. """
         loc = self.location
-        if type(loc) is dict and loc["city"]:
+        if isinstance(loc, dict) and loc["city"]:
             return loc["city"]["name"]
         return None
 
@@ -207,7 +207,7 @@ class MycroftSkill(object):
     def location_timezone(self):
         """ Get the timezone code, such as 'America/Los_Angeles' """
         loc = self.location
-        if type(loc) is dict and loc["timezone"]:
+        if isinstance(loc, dict) and loc["timezone"]:
             return loc["timezone"]["code"]
         return None
 
@@ -249,8 +249,7 @@ class MycroftSkill(object):
         def receive_handler(message):
             try:
                 handler(message)
-            except:
-                # TODO: Localize
+            except BaseException:                # TODO: Localize
                 self.speak(
                     "An error occurred while processing a request in " +
                     self.name)

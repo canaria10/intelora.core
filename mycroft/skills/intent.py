@@ -54,7 +54,7 @@ class Intent(object):
 
                 # TODO - Should Adapt handle this?
                 best_intent['utterance'] = utterance
-            except StopIteration, e:
+            except StopIteration as e:
                 logger.exception(e)
                 continue
 

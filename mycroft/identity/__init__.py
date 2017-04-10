@@ -41,7 +41,7 @@ class IdentityManager(object):
         try:
             with FileSystemAccess('identity').open('identity2.json', 'r') as f:
                 IdentityManager.__identity = DeviceIdentity(**json.load(f))
-        except:
+        except BaseException:
             IdentityManager.__identity = DeviceIdentity()
         return IdentityManager.__identity
 

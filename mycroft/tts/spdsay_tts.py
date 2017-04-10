@@ -43,7 +43,7 @@ class SpdSayValidator(TTSValidator):
     def validate_connection(self):
         try:
             subprocess.call(['spd-say', '--version'])
-        except:
+        except BaseException:
             raise Exception(
                 'SpdSay is not installed. Run: sudo apt-get install '
                 'speech-dispatcher')

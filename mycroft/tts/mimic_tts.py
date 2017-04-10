@@ -70,23 +70,23 @@ class Mimic(TTS):
         cache_dir = mycroft.util.get_cache_directory("tts")
         mycroft.util.curate_cache(cache_dir)
 
-        pho_file = os.path.join(cache_dir, key+".pho")
+        pho_file = os.path.join(cache_dir, key + ".pho")
         try:
             with open(pho_file, "w") as cachefile:
                 cachefile.write(phonemes)
-        except:
+        except BaseException:
             LOGGER.debug("Failed to write .PHO to cache")
             pass
 
     def load_phonemes(self, key):
         pho_file = os.path.join(mycroft.util.get_cache_directory("tts"),
-                                key+".pho")
+                                key + ".pho")
         if os.path.exists(pho_file):
             try:
                 with open(pho_file, "r") as cachefile:
                     phonemes = cachefile.read().strip()
                 return phonemes
-            except:
+            except BaseException:
                 LOGGER.debug("Failed to read .PHO from cache")
         return None
 
@@ -127,7 +127,7 @@ class MimicValidator(TTSValidator):
     def validate_connection(self):
         try:
             subprocess.call([BIN, '--version'])
-        except:
+        except BaseException:
             LOGGER.info("Falied to find mimic at: " + BIN)
             raise Exception(
                 'Mimic was not found. Run install-mimic.sh to install it.')

@@ -171,7 +171,7 @@ def main():
                 # do not log tokens from registration messages
                 _message["data"]["token"] = None
             message = json.dumps(_message)
-        except:
+        except BaseException:
             pass
         logger.debug(message)
 

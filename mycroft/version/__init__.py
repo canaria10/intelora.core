@@ -45,7 +45,7 @@ class VersionManager(object):
             try:
                 with open(VersionManager.__location) as f:
                     return json.load(f)
-            except:
+            except BaseException:
                 LOG.error("Failed to load version from '%s'"
                           % VersionManager.__location)
         return {"coreVersion": None, "enclosureVersion": None}

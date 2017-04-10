@@ -230,7 +230,7 @@ class Enclosure(object):
                 url=self.port, baudrate=self.rate, timeout=self.timeout)
             LOG.info("Connected to: %s rate: %s timeout: %s" %
                      (self.port, self.rate, self.timeout))
-        except:
+        except BaseException:
             LOG.error("Impossible to connect to serial port: " + self.port)
             raise
 
