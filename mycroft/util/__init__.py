@@ -74,7 +74,7 @@ def resolve_resource_file(res_name):
 
     # Finally look for it in the source package
     filename = os.path.join(os.path.dirname(__file__), '..',
-        'resources', res_name)
+                                            'resources', res_name)
     filename = os.path.abspath(os.path.normpath(filename))
     if os.path.isfile(filename):
         return filename

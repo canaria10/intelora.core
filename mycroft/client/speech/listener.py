@@ -112,9 +112,9 @@ class AudioConsumer(Thread):
             SessionManager.touch()
             self.state.sleeping = False
             lines = ["I'm awake.",
-                "System rebooted.",
-                "All systems check. I am now online.",
-                "Waking up."]
+                     "System rebooted.",
+                     "All systems check. I am now online.",
+                     "Waking up."]
             self.__speak(choice(lines))
             self.metrics.increment("mycroft.wakeup")
 
@@ -156,9 +156,9 @@ class AudioConsumer(Thread):
             LOG.error(e)
             LOG.error("Speech Recognition could not understand audio")
             lines = ["Sorry, I didn't catch that.",
-                "Sorry, I didn't hear you clearly.",
-                "Can you repeat what you said, please?",
-                "Can you please say that again?"]
+                     "Sorry, I didn't hear you clearly.",
+                     "Can you repeat what you said, please?",
+                     "Can you please say that again?"]
             self.__speak(choice(lines))
         if text:
             # STT succeeded, send the transcribed speech on for processing
