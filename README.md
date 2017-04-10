@@ -23,9 +23,9 @@ Download the latest [release](https://github.com/intelora/intelora.core/releases
 
 ### Debian, Arch, Fedora or Solus Based Operating Systems
 
-- Run the 'build_host_setup_*' script specific for your OS.
+- Run the `build_host_setup_*` script specific for your OS.
 - Run `dev_setup.sh` to setup the virtual environment.
-- All default [skills](https://github.com/intelora/intelora.skills) are automatically installed inside 'mycroft/skills' directory.
+- All default [skills](https://github.com/intelora/intelora.skills) are automatically installed inside `mycroft/skills` directory.
 
 ### Other Environments
 
