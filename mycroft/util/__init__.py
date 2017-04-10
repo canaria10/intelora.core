@@ -74,7 +74,7 @@ def resolve_resource_file(res_name):
 
     # Finally look for it in the source package
     filename = os.path.join(os.path.dirname(__file__), '..',
-                                            'resources', res_name)
+                            'resources', res_name)
     filename = os.path.abspath(os.path.normpath(filename))
     if os.path.isfile(filename):
         return filename
@@ -153,7 +153,7 @@ def kill(names):
                 if p.name() == name:
                     p.kill()
                     break
-            except:
+            except BaseException:
                 pass
 
 
@@ -198,7 +198,7 @@ def curate_cache(dir, min_free_percent=5.0):
     space = psutil.disk_usage(dir)
 
     # space.percent = space.used/space.total*100.0
-    percent_free = 100.0-space.percent
+    percent_free = 100.0 - space.percent
     if percent_free < min_free_percent:
         # calculate how many bytes we need to delete
         bytes_needed = (min_free_percent - percent_free) / 100.0 * space.total
@@ -218,7 +218,7 @@ def curate_cache(dir, min_free_percent=5.0):
             try:
                 os.remove(path)
                 space_freed += fsize
-            except:
+            except BaseException:
                 pass
 
             if space_freed > bytes_needed:
@@ -284,7 +284,7 @@ def _ensure_directory_exists(dir, domain=None):
     if not os.path.isdir(dir):
         try:
             save = os.umask(0)
-            os.makedirs(dir, 0777)  # give everyone rights to r/w here
+            os.makedirs(dir, 0o777)  # give everyone rights to r/w here
         except OSError:
             LOGGER.warn("Failed to create: " + dir)
             pass
