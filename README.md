@@ -25,7 +25,7 @@ Download the latest [release](https://github.com/intelora/intelora.core/releases
 
 - Run the `build_host_setup_*` script specific for your OS.
 - Run `dev_setup.sh` to setup the virtual environment.
-- All default [skills](https://github.com/intelora/intelora.skills) are automatically installed inside `mycroft/skills` directory.
+- Choose what skill from the [skills](https://github.com/intelora/intelora.skills) repository you want to use. Clone or Download and place them inside `mycroft/skills` located in the root directory.
 
 ### Other Environments
 
