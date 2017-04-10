@@ -3,8 +3,8 @@
 SKILLS_DIR='/opt/mycroft/skills'
 # exit on any error
 set -Ee
-rm -rf ism
 cd mycroft
+rm -rf ism
 git clone https://github.com/intelora/intelora.skill.manager.git ism
 chmod +x ism/ism
 
