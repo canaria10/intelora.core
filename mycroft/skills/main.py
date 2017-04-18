@@ -45,7 +45,7 @@ skill_reload_thread = None
 skills_manager_timer = None
 
 installer_config = ConfigurationManager.get().get("SkillInstallerSkill")
-MSM_BIN = installer_config.get("path", join(MYCROFT_ROOT_PATH, 'msm', 'msm'))
+MSM_BIN = installer_config.get("path", join(MYCROFT_ROOT_PATH, 'ism', 'ism'))
 
 
 def connect():
@@ -57,11 +57,11 @@ def skills_manager(message):
     global skills_manager_timer, ws
     if skills_manager_timer is None:
         ws.emit(
-            Message("speak", {'utterance': "Checking for Updates"}))
+            Message("speak", {'utterance': "Please wait a moment while I check for updates."}))
     os.system(MSM_BIN + " default")
     if skills_manager_timer is None:
         ws.emit(Message("speak", {
-            'utterance': "Skills Updated. Mycroft is ready"}))
+            'utterance': "System updated. I am now ready."}))
     skills_manager_timer = Timer(3600.0, skills_manager_dispatch)
     skills_manager_timer.daemon = True
     skills_manager_timer.start()
